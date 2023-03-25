@@ -1,0 +1,139 @@
+@keyframes hidden {
+    from{
+        opacity:0%;
+    }
+    to{
+        opacity: 100%;
+    }
+    
+  }
+  @keyframes sidesweep {
+    from{
+        width: 0%;
+        opacity: 0%;
+    }
+    to{
+        width: 50%;
+        opacity: 100%;
+    }
+  }
+  @keyframes squiiz{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+  }
+  @keyframes fadeSml {
+    from{
+        opacity: 50%;
+        height: 40px;
+        font-size: 20px;
+    }
+    to{
+        opacity: 100%;
+        height: 60px;
+        font-size: 30px;
+
+    }
+  }
+
+  @keyframes fade {
+    from{
+        opacity: 50%;
+        height: 0px;
+    }
+    to{
+        opacity: 100%;
+        height: 60px;
+
+    }
+  }
+.calculator {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    font-family: Arial, sans-serif;
+  }
+  
+  .screen {
+    margin-bottom: 10px;
+    animation-name: squiiz;
+    animation-duration: .4s;
+    animation-delay: .3s;
+    animation-fill-mode: backwards;
+    transition-property: height;
+    transition-duration: 1s;
+    
+  }
+  .screen :focus{
+    /* height: 60px; */
+    animation-name: fadeSml; 
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 7px 0px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: right;
+  }
+  
+  .button-row {
+    display: flex;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+ 
+  .xyz{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .xyz button{
+    color: rgb(230, 255, 104);
+    width: 50%;
+    animation-name: sidesweep;
+    animation-duration: .5s;
+    animation-delay: 0.3s;
+    animation-fill-mode:backwards;
+  }
+  
+  button {
+    width: 25%;
+    height: 50px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #719473;
+    color: #fff;
+    cursor: pointer;
+    transition-property: width,height;
+    transition-duration: .2s;
+    transition-delay: .0s;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+    width: 80px;
+    height: 55px;
+  }
+
+  .xyz button:hover{
+    color: rgb(230, 255, 104);
+    width: 60%;
+    height: 55px;
+    
+  }
+
+  
